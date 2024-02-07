@@ -1,0 +1,97 @@
+// Create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+  "name": "Jhon Doe",
+  "email": "jhon@gmail.com",
+  "password": "123456",
+  "confPassword": "123456",
+  "role": "user"
+}
+
+###
+// get All Users
+GET http://localhost:5000/users
+
+###
+// get Siggle Users
+GET http://localhost:5000/users/c824b482-80de-43a4-ba98-5ef61b743615
+
+###
+// Update a user
+PATCH http://localhost:5000/users/b9055f38-4a70-48a9-8213-4ef72873733d 
+Content-Type: application/json
+
+{
+  "name": "Jhon Upadated",
+  "email": "jhon@gmail.com",
+  "password": "",
+  "confPassword": "",
+  "role": "user"
+}
+
+###
+// Delete a user
+DELETE http://localhost:5000/users/b9055f38-4a70-48a9-8213-4ef72873733d 
+
+###
+// Login user admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email": "admin@gmail.com",
+  "password": "123456"
+}
+
+###
+// Login user biasa
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email": "jhon@gmail.com",
+  "password": "123456"
+}
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+###
+// Get All products
+GET http://localhost:5000/products
+
+###
+// Get single product
+GET http://localhost:5000/products/d2b46fe4-05ed-4a99-91d1-282e9816a1b4
+
+
+###
+// Post data product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+  "name": "Product 6",
+  "price": 997
+}
+
+###
+// Update data product
+PATCH http://localhost:5000/products/d2b46fe4-05ed-4a99-91d1-282e9816a1b4
+Content-Type: application/json
+
+{
+  "name": "Product Updated",
+  "price": 888
+}
+
+###
+// Deleted
+DELETE http://localhost:5000/products/1d403ebe-b21a-422a-997c-2bc271f4aee6
+
+
